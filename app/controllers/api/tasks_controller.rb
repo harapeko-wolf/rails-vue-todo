@@ -1,10 +1,11 @@
-class API::TasksController < ApplicationController
-  #GET /tasks
+class Api::TasksController < ApplicationController
+
+  # GET /tasks
   def index
-    @tasks = Task.order('update_at DESC')
+    @tasks = Task.order('updated_at DESC')
   end
 
-  #POST /tasks
+  # POST /tasks
   def create
     @task = Task.new(task_params)
 
@@ -15,11 +16,11 @@ class API::TasksController < ApplicationController
     end
   end
 
-  #PATCH/PUT /tasks/1
+  # PATCH/PUT /tasks/1
   def update
     @task = Task.find(params[:id])
     if @task.update(task_params)
-      rendar :show, status: :ok
+      render :show, status: :ok
     else
       render json: @task.errors, status: :unprocessable_entity
     end

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <ul id="dropdown" class="dropdown-content">
+    <ul id="dropdown1" class="dropdown-content">
       <li>
-        <router-link to="/">Top</router-link>
+        <a href="#!">Top</a>
       </li>
       <li>
-        <router-link to="/about">About</router-link>
+        <a href="#!">About</a>
       </li>
       <li>
-        <router-link to="/contact">Contact</router-link>
+        <a href="#!">Contact</a>
       </li>
     </ul>
     <nav>
@@ -27,7 +27,7 @@
         </ul>
         <ul class="right hide-on-large-only">
           <li>
-            <a class="dropdown-button" href="#!" data-activates="dropdown">
+            <a class="dropdown-button" href="#!" data-target="dropdown1">
               Menu
               <i class="material-icons right">arrow_drop_down</i>
             </a>
