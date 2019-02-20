@@ -26,6 +26,12 @@ class Api::TasksController < ApplicationController
     end
   end
 
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    head :no_content
+  end
+
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params

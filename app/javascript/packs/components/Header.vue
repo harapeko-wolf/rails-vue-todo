@@ -1,20 +1,9 @@
 <template>
   <div>
-    <ul id="dropdown1" class="dropdown-content">
-      <li>
-        <a href="#!">Top</a>
-      </li>
-      <li>
-        <a href="#!">About</a>
-      </li>
-      <li>
-        <a href="#!">Contact</a>
-      </li>
-    </ul>
     <nav>
       <div class="nav-wrapper container">
-        <a href="/" class="brand-logo left">Todo Application</a>
-        <ul class="right hide-on-med-and-down">
+        <a href="/" class="brand-logo left">Todo App</a>
+        <ul class="right">
           <li>
             <router-link to="/">Top</router-link>
           </li>
@@ -23,14 +12,6 @@
           </li>
           <li>
             <router-link to="/contact">Contact</router-link>
-          </li>
-        </ul>
-        <ul class="right hide-on-large-only">
-          <li>
-            <a class="dropdown-button" href="#!" data-target="dropdown1">
-              Menu
-              <i class="material-icons right">arrow_drop_down</i>
-            </a>
           </li>
         </ul>
       </div>
