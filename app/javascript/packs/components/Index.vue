@@ -6,7 +6,7 @@
         <input v-model="newTask" @keyup.enter="createTask" class="form-control" placeholder="Add your task!!" />
       </div>
       <div class="col s2 m1">
-        <div v-on:click="createTask" class="btn-floating waves-effect waves-light">
+        <div @click="createTask" class="btn-floating waves-effect waves-light">
           <i class="material-icons">add</i>
         </div>
       </div>
@@ -16,16 +16,16 @@
       <ul class="collection">
         <li v-for="task in tasks" v-if="!task.is_done" v-bind:id="'row_task_' + task.id" class="collection-item">
           <label>
-            <input type="checkbox" v-on:change="doneTask(task.id)" class="filled-in" v-bind:id="'task_' + task.id">
+            <input type="checkbox" @change="doneTask(task.id)" class="filled-in" v-bind:id="'task_' + task.id">
             <span v-bind:for="'task_' + task.id">{{ task.name }}</span>
           </label>
-          <button v-on:click="deleteTask(task.id)" class="btn-small red button-location">Delete</button>
+          <button @click="deleteTask(task.id)" class="btn-small red button-location">Delete</button>
         </li>
 
       </ul>
     </div>
     <!-- 完了済みタスク表示ボタン -->
-    <div class="btn" v-on:click="displayFinishedTasks">finished tasks</div>
+    <div class="btn" @click="displayFinishedTasks">finished tasks</div>
     <!-- 完了済みタスク一覧 -->
     <div id="finished-tasks" class="display_none">
       <ul class="collection">
@@ -34,7 +34,7 @@
             <input type="checkbox" class="filled-in" v-bind:id="'task_' + task.id" checked="checked">
             <span v-bind:for="'task_' + task.id" class="line-through">{{ task.name }}</span>
           </label>
-          <button v-on:click="deleteTask(task.id)" class="btn-small red button-location">Delete</button>
+          <button @click="deleteTask(task.id)" class="btn-small red button-location">Delete</button>
         </li>
       </ul>
     </div>
